@@ -1,0 +1,49 @@
+<nav class="action-panel centered">
+  <input
+    #searcherIcon
+    type="text"
+    class="icon-list-searcher"
+    placeholder="Search by icon name"
+    (input)="searchIcon(searcherIcon.value)"
+  >
+  <div class="action-buttons centered">
+   <ng-container *ngFor="let color of colorsArray">
+     <button
+       class="action-buttons__item"
+       [ngClass]="'action-buttons__item_' + color"
+       [class.white-text]="color !== 'default'"
+       (click)="changeIconColor(color)"
+     > {{getButtonName(color)}}</button>
+   </ng-container>
+  </div>
+</nav>
+<main class="icon-groups-wrapper">
+  <ng-container *ngFor="let size of iconSizeGroup">
+    <app-accordion
+      *ngIf="iconListGroupBySize[size].length"
+      [iconSrc]="iconList['accordion_down']"
+      [buttonLabel]="'Size ' + size"
+    >
+      <article
+        class="icon-groups"
+      >
+        <h4>{{'Size ' + size}}</h4>
+        <ul class="icon-groups__item icon-list">
+          <ng-container *ngFor="let icon of iconListGroupBySize[size]">
+            <li class="icon-list__item centered">
+              <span
+                class="icon-list__item-icon"
+                [ngClass]="'icon-list__item-icon_' + currentIconColor"
+                [innerHTML]="(icon.value)"
+              ></span>
+              <span
+                class="icon-list__item-label centered"
+              >{{icon.iconName}}</span>
+            </li>
+          </ng-container>
+        </ul>
+      </article>
+    </app-accordion>
+
+  </ng-container>
+</main>
