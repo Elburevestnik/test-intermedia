@@ -14,7 +14,7 @@ export interface IIconInfoList {
 @Component({
   selector: 'app-icon-list',
   templateUrl: './icon-list.component.html',
-  styleUrls: ['./icon-list.component.scss']
+  styleUrls: ['./icon-list.component.scss'],
 })
 export class IconListComponent implements OnInit {
   iconList = BASIC_ICONS;
@@ -81,5 +81,9 @@ export class IconListComponent implements OnInit {
 
   changeIconColor(color: string) {
     this.currentIconColor = color;
+  }
+
+  getButtonName(color: string) {
+    return color.replace(/[a-z]/, (letter) => letter.toUpperCase());
   }
 }

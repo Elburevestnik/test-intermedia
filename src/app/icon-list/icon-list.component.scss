@@ -65,6 +65,8 @@
 
   &_default {
     background: rgba(169, 169, 169, 0.8);
+
+    font-weight: bold;
   }
 
   &_blue {
@@ -118,4 +120,9 @@
       stroke: #ea9c27;
     }
   }
+}
+
+.white-text {
+  color: white;
+  font-weight: bold;
 }

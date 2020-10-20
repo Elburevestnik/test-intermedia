@@ -11,16 +11,28 @@
 
   cursor: pointer;
 
+  color: #24acff;
+  font-weight: bold;
+
   &__icon {
     margin-left: 5px;
     transition: 150ms ease-in-out;
   }
 
+
   &:focus {
     outline: none;
   }
 }
+
 .opened {
   transform: rotate(180deg);
   transition: 150ms ease-in-out;
+}
+
+::ng-deep .accordion-button__icon {
+   svg, path {
+    fill: #24acff;
+    stroke: #24acff;
+  }
 }

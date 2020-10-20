@@ -11,8 +11,9 @@
      <button
        class="action-buttons__item"
        [ngClass]="'action-buttons__item_' + color"
+       [class.white-text]="color !== 'default'"
        (click)="changeIconColor(color)"
-     > {{color}}</button>
+     > {{getButtonName(color)}}</button>
    </ng-container>
   </div>
 </nav>
