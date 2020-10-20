@@ -1,0 +1,15 @@
+<button class="accordion-button"
+        (click)="changeStateAccordion()"
+>
+  <p class="accordion-button__label">{{buttonLabel}}</p>
+  <span
+    class="accordion-button__icon"
+    [class.opened]="open"
+    [innerHTML]="iconSrc"
+  >
+  </span>
+</button>
+<ng-container *ngIf="open">
+  <ng-content
+  ></ng-content>
+</ng-container>

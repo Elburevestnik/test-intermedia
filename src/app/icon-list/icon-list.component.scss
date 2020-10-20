@@ -1,0 +1,121 @@
+
+.icon-list-searcher {
+  margin-right: 5px;
+}
+
+.icon-groups-wrapper {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-groups {
+  height: auto;
+  width: 100%;
+  min-height: 50px;
+
+  margin: 20px 0;
+}
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  &__item {
+    flex-basis: 250px;
+
+    margin: 5px;
+  }
+
+  &__item-icon {
+    height: auto;
+    width: auto;
+    min-height: 24px;
+    min-width: 24px;
+
+    margin-right: 5px;
+
+    background: transparent;
+  }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+}
+
+
+.action-buttons__item {
+  height: 30px;
+  width: 60px;
+
+  margin: 0 5px;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  &_default {
+    background: rgba(169, 169, 169, 0.8);
+  }
+
+  &_blue {
+    background: rgba(36, 172, 255, 0.8);
+  }
+  &_green {
+    background: rgba(102, 169, 11, 0.8);
+  }
+  &_orange {
+    background: rgba(234, 156, 39, 0.8);
+  }
+  &_red {
+    background: rgba(255, 28, 41, 0.8);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+::ng-deep .icon-list__item-icon {
+  &_default{
+    svg, path, circle, line {
+      fill: black;
+      stroke: black;
+    }
+  }
+  &_blue {
+    svg, path, circle, line {
+      fill: #24acff;
+      stroke: #24acff;
+    }
+  }
+
+  &_green {
+    svg, path, circle, line {
+      fill: #66a90b;
+      stroke: #66a90b;
+    }
+  }
+  &_red {
+    svg, path, circle, line {
+      fill: #ff1c29;
+      stroke: #ff1c29;
+    }
+  }
+  &_orange {
+    svg, path, circle, line {
+      fill: #ea9c27;
+      stroke: #ea9c27;
+    }
+  }
+}
